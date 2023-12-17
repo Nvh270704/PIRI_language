@@ -1,10 +1,11 @@
 **PIRI Programming Language**
 
 
-***Overview***
+***Overview:***
 PIRI is a programming language designed with simplicity and intuitiveness in mind, tailored specifically for older adults. It features a natural language-like syntax that is easy to learn and understand.
 
-*Features*
+***Features:***
+
 **Descriptive Syntax:** Uses straightforward phrases for variable declarations, loops, and conditions.
 **User-Friendly Constructs:** Focuses on readability with constructs resembling natural language.
 **Custom Lexer and Parser:** Implements a lexer and parser to process Piri syntax into executable code.
