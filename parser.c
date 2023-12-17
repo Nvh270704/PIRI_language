@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "lexer.h" // Include the lexer header file
+#include "lexer.h" 
 
 // Define AST Node Types and Structures
 typedef enum {
@@ -12,8 +12,7 @@ typedef enum {
 
 typedef struct ASTNode {
     ASTNodeType type;
-    // Structure fields for different types of AST nodes
-    // ...
+
 } ASTNode;
 
 // Function declarations for the parser
@@ -44,16 +43,14 @@ ASTNode *parse(Token *tokens, int tokenCount) {
 ASTNode *parseStatement(Token **tokens, int *currentIndex) {
     // Based on the current token, decide which type of statement to parse
     // Example: if the current token is 'create', call parseVariableDeclaration
-    // ... Implement logic for other types of statements ...
+    
 }
 
-// Functions to parse specific types of statements
-// ... Implement parseVariableDeclaration, parseDisplayStatement, etc. ...
+
 
 // Function to free AST nodes
 void freeAST(ASTNode *node) {
-    // Recursively free AST nodes
-    // ... Implement based on AST node types ...
+ 
 }
 
 int main() {
