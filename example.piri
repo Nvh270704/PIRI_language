@@ -1,0 +1,15 @@
+-- Creating a variable
+create number age set to 65
+
+-- Displaying text
+show "Hello, World!"
+
+-- Conditional statement
+if age is more than 60 then
+    show "Senior"
+
+-- Basic loop
+repeat 3 times do
+    show "Loop iteration"
+
+-- End of the program
