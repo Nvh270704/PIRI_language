@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-#include "lexer.h"  // Assuming this is your lexer header file
+#include "lexer.h"  
 
 // Function to create a token
 Token createToken(const char *value, TokenType type) {
@@ -58,24 +58,24 @@ void tokenize(const char *sourceCode, Token **tokens, int *tokenCount) {
             free(word);
         } else if (*ptr == '"') {
             // Handle string literals
-            ptr++;  // Skip the opening quote
+            ptr++;  
             const char *start = ptr;
             while (*ptr && *ptr != '"') ptr++;
             if (*ptr == '"') {
                 char *str = strndup(start, ptr - start);
                 (*tokens)[(*tokenCount)++] = createToken(str, TOKEN_STRING);
                 free(str);
-                ptr++;  // Skip the closing quote
+                ptr++;  
             } else {
                 // Handle error: Unclosed string literal
-                // You can set an error token or handle it as you see fit
+                
             }
         } else if (strncmp(ptr, "--", 2) == 0) {
             // Handle comments by skipping to the end of the line
             while (*ptr && *ptr != '\n') ptr++;
         } else {
             // Handle other symbols (operators, punctuation, etc.)
-            // This needs to be tailored to the specific symbols your language uses
+            
             // Example for handling a single character symbol:
             char symbol[2] = {*ptr, '\0'};
             (*tokens)[(*tokenCount)++] = createToken(symbol, TOKEN_SYMBOL);
@@ -94,14 +94,14 @@ void tokenize(const char *sourceCode, Token **tokens, int *tokenCount) {
 
 // Main function for testing the lexer
 int main() {
-    // Example usage of the lexer
+    
     const char *sourceCode = "create number age set to 65\nshow \"Hello, World!\"";
     Token *tokens = NULL;
     int tokenCount = 0;
 
     tokenize(sourceCode, &tokens, &tokenCount);
 
-    // Print tokens for demonstration
+    /
     for (int i = 0; i < tokenCount; i++) {
         printf("Token: %s, Type: %d\n", tokens[i].value, tokens[i].type);
     }
